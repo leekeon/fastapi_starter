@@ -65,9 +65,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_0D91AF68651B4B27AE58479CF6D73AEC }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_CF3E82DC95FE45C99053F83EFD428B9E }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_2D5E5465A2894A3E8062F599FBBCB735 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_88AA4C3C3A214DAE93E06528782FA571 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_B30440A360524D2FA3A83173FBE63D4C }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_E6AF6E1889144A6EA6C9A83C1B2742A3 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
@@ -75,5 +75,4 @@ jobs:
         with:
           app-name: 'test-as-01'
           slot-name: 'Production'
-          startup-command: 'python app/main.py'
           
